@@ -1,0 +1,48 @@
+{
+  "name": "create-react-ssr-app",
+  "version": "1.0.0",
+  "description": "Create React SSR App",
+  "main": "./bin/index.js",
+  "scripts": {
+    "dev": "cross-env tsc -w -p ./tsconfig.json",
+    "build": "cross-env tsc -p ./tsconfig.json --inlineSourceMap false",
+    "lint": "cross-env NODE_OPTIONS=--max_old_space_size=4096 eslint . --ext .js,.ts --cache",
+    "lint:fix": "cross-env NODE_OPTIONS=--max_old_space_size=4096 eslint . --ext .js,.ts --cache --fix",
+    "test": "cross-env jest --coverage --verbose"
+  },
+  "bin": {
+    "create-react-ssr-app": "bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DXM666/create-react-ssr-app"
+  },
+  "keywords": [
+    "ssr",
+    "react"
+  ],
+  "author": "DXM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DXM666/create-react-ssr-app/issues"
+  },
+  "homepage": "https://github.com/DXM666/create-react-ssr-app#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.0.27",
+    "@types/shelljs": "^0.8.8",
+    "codecov": "^3.8.0",
+    "cross-env": "^7.0.2",
+    "eslint-config-standard-react-ts": "^1.0.9",
+    "husky": "^4.3.0",
+    "jest": "^26.6.1",
+    "ts-jest": "^26.4.3",
+    "typescript": "^4.0.0"
+  },
+  "dependencies": {
+    "dclone": "^1.4.2",
+    "minimist": "^1.2.5",
+    "prompts": "^2.4.1",
+    "shelljs": "^0.8.4"
+  }
+}

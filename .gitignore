@@ -1,0 +1,7 @@
+node_modules
+package-lock.json
+bin
+coverage
+temporary
+.git_backup
+.eslintcache

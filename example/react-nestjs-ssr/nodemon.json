@@ -1,0 +1,7 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "delay": 1000,
+  "exec": "node --inspect ./dist/server.js",
+  "ext": "ts ejs yml json"
+}

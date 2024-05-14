@@ -1,0 +1,36 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "types": ["node"],
+    "target": "ES2018",
+    "moduleResolution": "node",
+    "inlineSourceMap": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "stripInternal": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "pretty": true,
+    "declaration": true,
+    "strict": true, // 启用所有严格类型检查选项
+    "noEmitOnError": true, // 类型错误时不输出文件
+    "forceConsistentCasingInFileNames": true // 确保文件名大小写一致
+  },
+  "watchOptions": {
+    // Use native file system events for files and directories
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    // Poll files for updates more frequently
+    // when they're updated a lot.
+    "fallbackPolling": "dynamicPriority",
+    // Don't coalesce watch notification
+    "synchronousWatchDirectory": true,
+    // Finally, two additional settings for reducing the amount of possible
+    // files to track  work from these directories
+    "excludeDirectories": ["**/node_modules", "dist"]
+    // "excludeFiles": ["build/fileWhichChangesOften.ts"]
+  },
+  "include": ["src/server.ts"],
+  "exclude": ["node_modules"]
+}
